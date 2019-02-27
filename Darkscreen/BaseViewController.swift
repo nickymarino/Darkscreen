@@ -43,8 +43,8 @@ class BaseViewController: UIViewController {
         // Navbar background color
         UINavigationBar.appearance().barTintColor = Settings.theme.backgroundColor
         // Navbar text/icon color
-        UINavigationBar.appearance().tintColor = Settings.theme.textColor
-
+        UINavigationBar.appearance().tintColor = Settings.theme.primaryColor
+        // Navbar status bar style
         self.navigationController?.navigationBar.barStyle = Settings.theme.navbarStyle
     }
 }

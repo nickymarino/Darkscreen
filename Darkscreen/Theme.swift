@@ -12,7 +12,7 @@ import UIKit
 class Theme {
     var statusBarStyle: UIStatusBarStyle
     var backgroundColor: UIColor
-    var textColor: UIColor
+    var primaryColor: UIColor
 
     var navbarStyle: UIBarStyle {
         get {
@@ -23,10 +23,10 @@ class Theme {
         }
     }
 
-    init(statusBar: UIStatusBarStyle, background: UIColor, text: UIColor) {
+    init(statusBar: UIStatusBarStyle, background: UIColor, primary: UIColor) {
         statusBarStyle = statusBar
         backgroundColor = background
-        textColor = text
+        primaryColor = primary
     }
 }
 

@@ -18,12 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlY-zt-7Ew">
-                                <rect key="frame" x="489" y="668" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlY-zt-7Ew">
+                                <rect key="frame" x="457" y="619" width="112" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="gear"/>
                                 <connections>
-                                    <segue destination="9zJ-Dd-V46" kind="show" id="wQU-hF-GdF"/>
+                                    <segue destination="9zJ-Dd-V46" kind="show" id="SQ5-X1-23Q"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -31,6 +31,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="O44-hm-QIa"/>
+                    <connections>
+                        <outlet property="settingsButton" destination="UlY-zt-7Ew" id="tf9-tB-Ffe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,4 +71,7 @@
             <point key="canvasLocation" x="-306" y="673"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gear" width="112" height="128"/>
+    </resources>
 </document>

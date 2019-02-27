@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: BaseViewController {
+    @IBOutlet weak var settingsButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +21,14 @@ class ViewController: BaseViewController {
         Settings.setVersionAndBuildNumber()
         UserDefaults.standard.register(defaults: [String:AnyObject]())
         
+    }
+
+    override func updateViewFromSettings() {
+        // ("gear.png" in Assets.xcassets is set to render as template image
+        // to allow this to work)
+        settingsButton?.tintColor = Settings.theme.primaryColor
+
+        super.updateViewFromSettings()
     }
 
     override func viewWillAppear(_ animated: Bool) {

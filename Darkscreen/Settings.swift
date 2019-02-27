@@ -24,9 +24,11 @@ class Settings {
 
     private static let themes: [String:Theme] = [
         "Dark": Theme(statusBar: .lightContent,
-                           background: .black,
-                           text: .appleYellow),
-        "Light": Theme(statusBar: .default, background: .white, text: .appleBlue)
+                      background: .black,
+                      primary: .appleYellow),
+        "Light": Theme(statusBar: .default,
+                       background: .white,
+                       primary: .appleBlue)
     ]
 
     class func setVersionAndBuildNumber() {
