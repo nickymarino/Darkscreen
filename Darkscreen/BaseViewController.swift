@@ -40,11 +40,19 @@ class BaseViewController: UIViewController {
         setNeedsStatusBarAppearanceUpdate()
         self.view.backgroundColor = Settings.theme.backgroundColor
 
-        // Navbar background color
-        UINavigationBar.appearance().barTintColor = Settings.theme.backgroundColor
-        // Navbar text/icon color
-        UINavigationBar.appearance().tintColor = Settings.theme.primaryColor
-        // Navbar status bar style
-        self.navigationController?.navigationBar.barStyle = Settings.theme.navbarStyle
+        // Update the navigation bar
+        if let navBar = self.navigationController?.navigationBar {
+            // Background color
+            navBar.barTintColor = Settings.theme.backgroundColor
+
+            // Text & icon color
+            navBar.tintColor = Settings.theme.primaryColor
+
+            // Status bar style
+            navBar.barStyle = Settings.theme.navbarStyle
+
+            // Tell the system to update it
+            navBar.setNeedsDisplay()
+        }
     }
 }

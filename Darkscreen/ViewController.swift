@@ -31,6 +31,8 @@ class ViewController: BaseViewController {
         super.updateViewFromSettings()
     }
 
+
+    /// Hide the navigation bar when this view is shown
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: animated)
 
@@ -38,6 +40,7 @@ class ViewController: BaseViewController {
         super.viewWillAppear(animated)
     }
 
+    /// Un-hide the navigation bar when this view isn't shown
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: animated)
 
