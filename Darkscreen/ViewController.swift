@@ -8,37 +8,31 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    private var settings = SettingsModel()
-
+class ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view, typically from a nib.
-        setNeedsStatusBarAppearanceUpdate()
-        registerSettingsBundleAndChangeObserver()
-        updateViewFromSettings()
+        registerSettingsBundle()
     }
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return settings.theme.statusBarStyle
-    }
-
-    func registerSettingsBundleAndChangeObserver() {
+    func registerSettingsBundle() {
+        Settings.setVersionAndBuildNumber()
         UserDefaults.standard.register(defaults: [String:AnyObject]())
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(ViewController.defaultsChanged),
-                                               name: UserDefaults.didChangeNotification,
-                                               object: nil)
+        
     }
 
-    @objc func defaultsChanged() {
-        updateViewFromSettings()
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+
+        // Must call super in overridden implementation
+        super.viewWillAppear(animated)
     }
 
-    func updateViewFromSettings() {
-        setNeedsStatusBarAppearanceUpdate()
-        self.view.backgroundColor = settings.theme.backgroundColor
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+
+        // Must call super in overridden implementation
+        super.viewWillDisappear(animated)
     }
 }
 

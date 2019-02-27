@@ -1,15 +1,42 @@
 //
-//  SettingsBundleHelper.swift
+//  l.swift
 //  Darkscreen
 //
 //  Created by Nicky Marino on 2/26/19.
 //  Copyright © 2019 Nicky Marino. All rights reserved.
 //
 
-
 import Foundation
+import UIKit
 
-class SettingsBundleHelper {
+// Tutorial used:
+// https://medium.com/@abhimuralidharan/adding-settings-to-your-ios-app-cecef8c5497
+
+class Settings {
+    class var theme: Theme {
+        get {
+            if SettingsBundleHelper.darkModeEnabled() {
+                return themes["Dark"]!
+            }
+            return themes["Light"]!
+        }
+    }
+
+    private static let themes: [String:Theme] = [
+        "Dark": Theme(statusBar: .lightContent,
+                           background: .black,
+                           text: .appleYellow),
+        "Light": Theme(statusBar: .default, background: .white, text: .appleBlue)
+    ]
+
+    class func setVersionAndBuildNumber() {
+        SettingsBundleHelper.setVersionAndBuildNumber()
+    }
+}
+
+
+/// Used to communciate directly with stored info in the Settings.bundle
+private class SettingsBundleHelper {
     struct BundleKeys {
         static let DarkModeEnabledKey = "dark_mode_enabled_preference"
         static let BuildVersionKey = "build_preference"

@@ -13,8 +13,10 @@
 		801BED1B22177F7700E3F610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801BED1A22177F7700E3F610 /* Assets.xcassets */; };
 		801BED1E22177F7700E3F610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 801BED1C22177F7700E3F610 /* LaunchScreen.storyboard */; };
 		80632AB4222612D5002BC39A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 80632AB3222612D5002BC39A /* Settings.bundle */; };
-		80632AB6222615C1002BC39A /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80632AB5222615C1002BC39A /* SettingsBundleHelper.swift */; };
-		80632AB8222618F7002BC39A /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80632AB7222618F7002BC39A /* SettingsModel.swift */; };
+		80632AB8222618F7002BC39A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80632AB7222618F7002BC39A /* Settings.swift */; };
+		80632ABA22262658002BC39A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80632AB922262658002BC39A /* SettingsViewController.swift */; };
+		80632ABC222629CC002BC39A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80632ABB222629CC002BC39A /* BaseViewController.swift */; };
+		80632ABE2226324F002BC39A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80632ABD2226324F002BC39A /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +28,10 @@
 		801BED1D22177F7700E3F610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		801BED1F22177F7700E3F610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80632AB3222612D5002BC39A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		80632AB5222615C1002BC39A /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
-		80632AB7222618F7002BC39A /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		80632AB7222618F7002BC39A /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		80632AB922262658002BC39A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		80632ABB222629CC002BC39A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		80632ABD2226324F002BC39A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +64,6 @@
 		801BED1222177F7600E3F610 /* Darkscreen */ = {
 			isa = PBXGroup;
 			children = (
-				80632AB5222615C1002BC39A /* SettingsBundleHelper.swift */,
 				801BED1322177F7600E3F610 /* AppDelegate.swift */,
 				801BED1522177F7600E3F610 /* ViewController.swift */,
 				80632AB3222612D5002BC39A /* Settings.bundle */,
@@ -68,7 +71,10 @@
 				801BED1A22177F7700E3F610 /* Assets.xcassets */,
 				801BED1C22177F7700E3F610 /* LaunchScreen.storyboard */,
 				801BED1F22177F7700E3F610 /* Info.plist */,
-				80632AB7222618F7002BC39A /* SettingsModel.swift */,
+				80632AB7222618F7002BC39A /* Settings.swift */,
+				80632AB922262658002BC39A /* SettingsViewController.swift */,
+				80632ABB222629CC002BC39A /* BaseViewController.swift */,
+				80632ABD2226324F002BC39A /* Theme.swift */,
 			);
 			path = Darkscreen;
 			sourceTree = "<group>";
@@ -145,10 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80632AB8222618F7002BC39A /* SettingsModel.swift in Sources */,
+				80632AB8222618F7002BC39A /* Settings.swift in Sources */,
 				801BED1622177F7600E3F610 /* ViewController.swift in Sources */,
-				80632AB6222615C1002BC39A /* SettingsBundleHelper.swift in Sources */,
+				80632ABA22262658002BC39A /* SettingsViewController.swift in Sources */,
+				80632ABE2226324F002BC39A /* Theme.swift in Sources */,
 				801BED1422177F7600E3F610 /* AppDelegate.swift in Sources */,
+				80632ABC222629CC002BC39A /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
