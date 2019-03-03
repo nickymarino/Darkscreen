@@ -23,12 +23,12 @@ class ViewController: BaseViewController {
         
     }
 
-    override func updateViewFromSettings() {
+    override func updateTheme() {
         // ("gear.png" in Assets.xcassets is set to render as template image
         // to allow this to work)
-        settingsButton?.tintColor = Settings.theme.primaryColor
+        settingsButton?.tintColor = Settings.theme.secondaryColor
 
-        super.updateViewFromSettings()
+        super.updateTheme()
     }
 
 

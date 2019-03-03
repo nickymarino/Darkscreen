@@ -17,6 +17,7 @@
 		80632ABA22262658002BC39A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80632AB922262658002BC39A /* SettingsViewController.swift */; };
 		80632ABC222629CC002BC39A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80632ABB222629CC002BC39A /* BaseViewController.swift */; };
 		80632ABE2226324F002BC39A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80632ABD2226324F002BC39A /* Theme.swift */; };
+		807B9E38222A00AB00121C30 /* UIKitThemeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807B9E37222A00AB00121C30 /* UIKitThemeExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		80632AB922262658002BC39A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		80632ABB222629CC002BC39A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		80632ABD2226324F002BC39A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		807B9E37222A00AB00121C30 /* UIKitThemeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitThemeExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				80632AB922262658002BC39A /* SettingsViewController.swift */,
 				80632ABB222629CC002BC39A /* BaseViewController.swift */,
 				80632ABD2226324F002BC39A /* Theme.swift */,
+				807B9E37222A00AB00121C30 /* UIKitThemeExtensions.swift */,
 			);
 			path = Darkscreen;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80632AB8222618F7002BC39A /* Settings.swift in Sources */,
+				807B9E38222A00AB00121C30 /* UIKitThemeExtensions.swift in Sources */,
 				801BED1622177F7600E3F610 /* ViewController.swift in Sources */,
 				80632ABA22262658002BC39A /* SettingsViewController.swift in Sources */,
 				80632ABE2226324F002BC39A /* Theme.swift in Sources */,

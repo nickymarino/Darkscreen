@@ -9,11 +9,24 @@
 import UIKit
 
 class SettingsViewController: BaseViewController {
+    @IBOutlet weak var darkModeEnabledSwitch: UISwitch!
+    @IBOutlet weak var darkModeEnabledLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        updateViewFromSettings()
+        updateTheme()
+    }
+
+    override func updateTheme() {
+        darkModeEnabledSwitch.isOn = Settings.darkModeEnabled
+//        darkModeEnabledSwitch.updateTheme()
+        darkModeEnabledLabel.updateTheme()
+        super.updateTheme()
+    }
+
+    @IBAction func darkModeEnabledSwitchUpdated(_ sender: Any) {
+        Settings.darkModeEnabled = darkModeEnabledSwitch.isOn
     }
 }

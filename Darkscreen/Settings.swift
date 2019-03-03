@@ -15,21 +15,17 @@ import UIKit
 class Settings {
     class var theme: Theme {
         get {
-            if SettingsBundleHelper.darkModeEnabled() {
-                return themes["Dark"]!
+            if darkModeEnabled {
+                return Theme.getTheme("Dark")
             }
-            return themes["Light"]!
+            return Theme.getTheme("Light")
         }
     }
 
-    private static let themes: [String:Theme] = [
-        "Dark": Theme(statusBar: .lightContent,
-                      background: .black,
-                      primary: .appleYellow),
-        "Light": Theme(statusBar: .default,
-                       background: .white,
-                       primary: .appleBlue)
-    ]
+    class var darkModeEnabled: Bool {
+        get { return SettingsBundleHelper.darkModeEnabled }
+        set(isEnabled) { SettingsBundleHelper.darkModeEnabled = isEnabled }
+    }
 
     class func setVersionAndBuildNumber() {
         SettingsBundleHelper.setVersionAndBuildNumber()
@@ -53,7 +49,12 @@ private class SettingsBundleHelper {
         UserDefaults.standard.set(build, forKey: BundleKeys.BuildVersionKey)
     }
 
-    class func darkModeEnabled() -> Bool {
-        return UserDefaults.standard.bool(forKey: BundleKeys.DarkModeEnabledKey)
+    class var darkModeEnabled: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: BundleKeys.DarkModeEnabledKey)
+        }
+        set(isEnabled) {
+            UserDefaults.standard.set(isEnabled, forKey: BundleKeys.DarkModeEnabledKey)
+        }
     }
 }

@@ -16,7 +16,7 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
 
         setNeedsStatusBarAppearanceUpdate()
-        updateViewFromSettings()
+        updateTheme()
         registerForSettingsChange()
     }
 
@@ -33,26 +33,17 @@ class BaseViewController: UIViewController {
     }
 
     @objc func settingsChanged() {
-        updateViewFromSettings()
+        updateTheme()
     }
 
-    func updateViewFromSettings() {
+    func updateTheme() {
+        // Status bar
         setNeedsStatusBarAppearanceUpdate()
+
+        // Background color
         self.view.backgroundColor = Settings.theme.backgroundColor
 
-        // Update the navigation bar
-        if let navBar = self.navigationController?.navigationBar {
-            // Background color
-            navBar.barTintColor = Settings.theme.backgroundColor
-
-            // Text & icon color
-            navBar.tintColor = Settings.theme.primaryColor
-
-            // Status bar style
-            navBar.barStyle = Settings.theme.navbarStyle
-
-            // Tell the system to update it
-            navBar.setNeedsDisplay()
-        }
+        // Navigation bar
+        navigationController?.navigationBar.updateTheme()
     }
 }
