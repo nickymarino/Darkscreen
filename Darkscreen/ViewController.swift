@@ -8,13 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: BaseViewController {
+    @IBOutlet weak var settingsButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        registerSettingsBundle()
     }
 
-
+    func registerSettingsBundle() {
+        Settings.setVersionAndBuildNumber()
+        UserDefaults.standard.register(defaults: [String:AnyObject]())
+    }
 }
 
