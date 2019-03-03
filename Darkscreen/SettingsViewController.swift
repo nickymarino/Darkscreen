@@ -21,7 +21,6 @@ class SettingsViewController: BaseViewController {
 
     override func updateTheme() {
         darkModeEnabledSwitch.isOn = Settings.darkModeEnabled
-//        darkModeEnabledSwitch.updateTheme()
         darkModeEnabledLabel.updateTheme()
         super.updateTheme()
     }
