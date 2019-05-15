@@ -1,17 +1,13 @@
 //
-//  BaseViewController.swift
-//  Darkscreen
+//  BaseTableViewController.swift
+//  
 //
-//  Created by Nicky Marino on 2/26/19.
-//  Copyright © 2019 Nicky Marino. All rights reserved.
+//  Created by Nicky Marino on 5/15/19.
 //
 
 import UIKit
 
-
-/// All ViewControllers should inherit from this base class
-class BaseViewController: UIViewController {
-
+class BaseTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,5 +41,9 @@ class BaseViewController: UIViewController {
 
         // Navigation bar
         navigationController?.navigationBar.updateTheme()
+
+        for cell in tableView.visibleCells {
+            cell.updateTheme()
+        }
     }
 }

@@ -6,7 +6,6 @@
 //  Copyright © 2019 Nicky Marino. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class Theme {
@@ -15,7 +14,6 @@ class Theme {
     var backgroundColor: UIColor
     var primaryColor: UIColor
     var secondaryColor: UIColor
-
     var navbarStyle: UIBarStyle {
         get {
             if statusBarStyle == .default {
@@ -24,17 +22,13 @@ class Theme {
             return .black
         }
     }
-
-    static let themes: [Theme] = [
-        Theme("Dark", statusBar: .lightContent,
-                      background: .black,
-                      primary: .white,
-                      secondary: .appleYellow),
-        Theme("Light", statusBar: .default,
-                       background: .white,
-                       primary: .black,
-                       secondary: .appleBlue)
-    ]
+    var isSelected: Bool {
+        get {
+            return Settings.shared.theme.name == name
+        } set {
+            Settings.shared.theme.name = name
+        }
+    }
 
     init(_ name: String, statusBar: UIStatusBarStyle, background: UIColor, primary: UIColor, secondary: UIColor) {
         self.name = name
@@ -43,25 +37,14 @@ class Theme {
         primaryColor = primary
         secondaryColor = secondary
     }
+}
 
-    static func getThemeBy(name: String) -> Theme {
-        for theme in themes {
-            if theme.name == name {
-                return theme
-            }
-        }
-        return themes.first!
+extension Array where Element:Theme {
+    func getFirstBy(name: String?) -> Theme? {
+        return self.first(where: {$0.name == name})
     }
 
-    static func getThemeBy(rowNumber: Int) -> Theme {
-        if rowNumber > themes.count {
-            print("Error: row number \(rowNumber) > theme count \(themes.count)")
-            return themes[0]
-        }
-        return themes[rowNumber]
-    }
-
-    static func themeNames() -> [String] {
-        return themes.map({$0.name}).sorted()
+    func getFirstIndexBy(name: String?) -> Index? {
+        return self.firstIndex(where: {$0.name == name})
     }
 }

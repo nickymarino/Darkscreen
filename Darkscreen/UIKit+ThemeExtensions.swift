@@ -1,25 +1,23 @@
 //
-//  UIKitThemeExtensions.swift
+//  UIKit+ThemeExtensions.swift
 //  Darkscreen
 //
 //  Created by Nicky Marino on 3/1/19.
 //  Copyright © 2019 Nicky Marino. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-
 public extension UINavigationBar {
-    public func updateTheme() {
+    func updateTheme() {
         // Background color
-        barTintColor = Settings.theme.backgroundColor
+        barTintColor = Settings.shared.theme.backgroundColor
 
         // Text & icon color
-        tintColor = Settings.theme.secondaryColor
+        tintColor = Settings.shared.theme.secondaryColor
 
         // Status bar style
-        barStyle = Settings.theme.navbarStyle
+        barStyle = Settings.shared.theme.navbarStyle
 
         // Tell the system to update it
         setNeedsDisplay()
@@ -27,14 +25,22 @@ public extension UINavigationBar {
 }
 
 public extension UILabel {
-    public func updateTheme() {
-        textColor = Settings.theme.primaryColor
+    func updateTheme() {
+        textColor = Settings.shared.theme.primaryColor
     }
 }
 
-/// Collection of Apple colours found in Human Interface Guidelines
-/// https://developer.apple.com/ios/human-interface-guidelines/visual-design/color/
+public extension UITableViewCell {
+    func updateTheme() {
+        textLabel?.updateTheme()
+        backgroundColor = Settings.shared.theme.backgroundColor
+        tintColor = Settings.shared.theme.secondaryColor
+    }
+}
+
 public extension UIColor {
+    // Collection of Apple colours found in Human Interface Guidelines
+    // https://developer.apple.com/ios/human-interface-guidelines/visual-design/color/
     static let appleRed = UIColor(red: 255/255, green: 59/255, blue: 48/255, alpha: 1)
     static let appleOrange = UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 1)
     static let appleYellow = UIColor(red: 255/255, green: 204/255, blue: 0/255, alpha: 1)

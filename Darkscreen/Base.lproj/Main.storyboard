@@ -10,21 +10,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Darkscreen-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Darkscreen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" id="BYZ-38-t0r" customClass="DSViewController" customModule="Darkscreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Darkscreen" id="O44-hm-QIa">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="O44-hm-QIa">
                         <barButtonItem key="rightBarButtonItem" title="Themes" id="CUX-G4-GY1">
                             <inset key="imageInsets" minX="0.0" minY="0.0" maxX="-40" maxY="0.0"/>
                             <connections>
-                                <segue destination="9zJ-Dd-V46" kind="show" id="hhc-NZ-whF"/>
+                                <segue destination="Djn-Zb-0vE" kind="presentation" id="cD4-dY-bqx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -36,54 +36,36 @@
             </objects>
             <point key="canvasLocation" x="411.9140625" y="672.91361639824299"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="cV0-aA-4Ft">
+        <!--Themes Table View Controller-->
+        <scene sceneID="uXa-sW-BWd">
             <objects>
-                <viewController id="9zJ-Dd-V46" customClass="SettingsViewController" customModule="Darkscreen" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9ok-QG-VcR">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ArP-1a-hDE">
-                                <rect key="frame" x="410" y="410" width="204" height="31"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="4nd-FI-uuK">
-                                        <rect key="frame" x="0.0" y="0.0" width="204" height="31"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4y-a6-LKM">
-                                                <rect key="frame" x="0.0" y="0.0" width="84" height="31"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dt9-YV-M1d">
-                                                <rect key="frame" x="156" y="0.0" width="50" height="31"/>
-                                                <connections>
-                                                    <action selector="darkModeEnabledSwitchUpdated:" destination="9zJ-Dd-V46" eventType="valueChanged" id="tNb-1K-j8L"/>
-                                                </connections>
-                                            </switch>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
+                <viewController modalPresentationStyle="formSheet" id="aoC-gn-gMc" customClass="ThemesTableViewController" customModule="Darkscreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qNH-H4-CYA">
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="ArP-1a-hDE" firstAttribute="leading" secondItem="Wnh-iS-sgU" secondAttribute="leading" constant="410" id="5qy-7t-d6r"/>
-                            <constraint firstItem="ArP-1a-hDE" firstAttribute="top" secondItem="Wnh-iS-sgU" secondAttribute="top" constant="288" id="eJu-ml-GqV"/>
-                            <constraint firstItem="ArP-1a-hDE" firstAttribute="centerX" secondItem="Wnh-iS-sgU" secondAttribute="centerX" id="rtc-f4-y7s"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Wnh-iS-sgU"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Settings" id="RzM-ui-t0T"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ThemeCell" id="faU-E8-LZr">
+                                <rect key="frame" x="0.0" y="28" width="540" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="faU-E8-LZr" id="twW-PX-fkI">
+                                    <rect key="frame" x="0.0" y="0.0" width="540" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Yfr-Dr-P9g">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Ev4-fe-NDn"/>
+                    </navigationItem>
+                    <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="darkModeEnabledLabel" destination="X4y-a6-LKM" id="31X-tE-dTF"/>
-                        <outlet property="darkModeEnabledSwitch" destination="dt9-YV-M1d" id="6KR-BO-jJY"/>
+                        <outlet property="doneButton" destination="Ev4-fe-NDn" id="fSe-zy-9ka"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4vs-XG-GyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lge-jq-gg3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1140" y="673"/>
+            <point key="canvasLocation" x="1841.0156249999998" y="672.91361639824299"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WsI-xg-7ah">
@@ -100,6 +82,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MLn-hm-M7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-306" y="673"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sYR-ez-XqY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" modalPresentationStyle="formSheet" id="Djn-Zb-0vE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RQW-L0-cZF">
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aoC-gn-gMc" kind="relationship" relationship="rootViewController" id="dZJ-Hw-ZnI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOM-YU-03m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116.796875" y="672.91361639824299"/>
         </scene>
     </scenes>
 </document>
