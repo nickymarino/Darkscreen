@@ -8,13 +8,13 @@
 	<array>
 		<dict>
 			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
+			<string>PSTitleValueSpecifier</string>
 			<key>Title</key>
-			<string>Dark mode</string>
+			<string>Theme</string>
 			<key>Key</key>
-			<string>dark_mode_enabled_preference</string>
+			<string>theme_preference</string>
 			<key>DefaultValue</key>
-			<true/>
+			<string>Dark</string>
 		</dict>
 		<dict>
 			<key>Type</key>

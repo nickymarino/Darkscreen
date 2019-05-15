@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: BaseViewController {
+class DSViewController: BaseViewController {
     @IBOutlet weak var settingsButton: UIBarButtonItem!
     
     override func viewDidLoad() {

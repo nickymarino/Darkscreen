@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Darkscreen.xcodeproj">
+      location = "group:/Users/nicky/Developer/Darkscreen/Darkscreen/Settings.bundle">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/nicky/Developer/Darkscreen/Darkscreen/Settings.swift">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

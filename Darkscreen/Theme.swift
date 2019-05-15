@@ -6,15 +6,14 @@
 //  Copyright © 2019 Nicky Marino. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class Theme {
+    var name: String
     var statusBarStyle: UIStatusBarStyle
     var backgroundColor: UIColor
     var primaryColor: UIColor
     var secondaryColor: UIColor
-
     var navbarStyle: UIBarStyle {
         get {
             if statusBarStyle == .default {
@@ -23,29 +22,29 @@ class Theme {
             return .black
         }
     }
+    var isSelected: Bool {
+        get {
+            return Settings.shared.theme.name == name
+        } set {
+            Settings.shared.theme.name = name
+        }
+    }
 
-    private static let themes: [String:Theme] = [
-        "Dark": Theme(statusBar: .lightContent,
-                      background: .black,
-                      primary: .white,
-                      secondary: .appleYellow),
-        "Light": Theme(statusBar: .default,
-                       background: .white,
-                       primary: .black,
-                       secondary: .appleBlue)
-    ]
-
-    init(statusBar: UIStatusBarStyle, background: UIColor, primary: UIColor, secondary: UIColor) {
+    init(_ name: String, statusBar: UIStatusBarStyle, background: UIColor, primary: UIColor, secondary: UIColor) {
+        self.name = name
         statusBarStyle = statusBar
         backgroundColor = background
         primaryColor = primary
         secondaryColor = secondary
     }
+}
 
-    static func getTheme(_ name: String) -> Theme {
-        if let theme = themes[name] {
-            return theme
-        }
-        return themes.first!.value
+extension Array where Element:Theme {
+    func getFirstBy(name: String?) -> Theme? {
+        return self.first(where: {$0.name == name})
+    }
+
+    func getFirstIndexBy(name: String?) -> Index? {
+        return self.firstIndex(where: {$0.name == name})
     }
 }

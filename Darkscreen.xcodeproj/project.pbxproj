@@ -8,32 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		801BED1422177F7600E3F610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BED1322177F7600E3F610 /* AppDelegate.swift */; };
-		801BED1622177F7600E3F610 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BED1522177F7600E3F610 /* ViewController.swift */; };
+		801BED1622177F7600E3F610 /* DSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BED1522177F7600E3F610 /* DSViewController.swift */; };
 		801BED1922177F7600E3F610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 801BED1722177F7600E3F610 /* Main.storyboard */; };
 		801BED1B22177F7700E3F610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801BED1A22177F7700E3F610 /* Assets.xcassets */; };
 		801BED1E22177F7700E3F610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 801BED1C22177F7700E3F610 /* LaunchScreen.storyboard */; };
-		80632AB4222612D5002BC39A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 80632AB3222612D5002BC39A /* Settings.bundle */; };
-		80632AB8222618F7002BC39A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80632AB7222618F7002BC39A /* Settings.swift */; };
-		80632ABA22262658002BC39A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80632AB922262658002BC39A /* SettingsViewController.swift */; };
+		802860E1228BD200000433D2 /* ThemesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802860E0228BD200000433D2 /* ThemesTableViewController.swift */; };
+		802860E6228BD811000433D2 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802860E4228BD811000433D2 /* Settings.swift */; };
+		802860E8228BEA95000433D2 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802860E7228BEA95000433D2 /* BaseTableViewController.swift */; };
 		80632ABC222629CC002BC39A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80632ABB222629CC002BC39A /* BaseViewController.swift */; };
 		80632ABE2226324F002BC39A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80632ABD2226324F002BC39A /* Theme.swift */; };
-		807B9E38222A00AB00121C30 /* UIKitThemeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807B9E37222A00AB00121C30 /* UIKitThemeExtensions.swift */; };
+		807B9E38222A00AB00121C30 /* UIKit+ThemeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807B9E37222A00AB00121C30 /* UIKit+ThemeExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		801BED1022177F7600E3F610 /* Darkscreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Darkscreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		801BED1322177F7600E3F610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		801BED1522177F7600E3F610 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		801BED1522177F7600E3F610 /* DSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSViewController.swift; sourceTree = "<group>"; };
 		801BED1822177F7600E3F610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		801BED1A22177F7700E3F610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		801BED1D22177F7700E3F610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		801BED1F22177F7700E3F610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		80632AB3222612D5002BC39A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		80632AB7222618F7002BC39A /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		80632AB922262658002BC39A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		802860E0228BD200000433D2 /* ThemesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ThemesTableViewController.swift; path = /Users/nicky/Developer/Darkscreen/Darkscreen/ThemesTableViewController.swift; sourceTree = "<absolute>"; };
+		802860E4228BD811000433D2 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = /Users/nicky/Developer/Darkscreen/Darkscreen/Settings.swift; sourceTree = "<absolute>"; };
+		802860E5228BD811000433D2 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = /Users/nicky/Developer/Darkscreen/Darkscreen/Settings.bundle; sourceTree = "<absolute>"; };
+		802860E7228BEA95000433D2 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		80632ABB222629CC002BC39A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		80632ABD2226324F002BC39A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		807B9E37222A00AB00121C30 /* UIKitThemeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitThemeExtensions.swift; sourceTree = "<group>"; };
+		807B9E37222A00AB00121C30 /* UIKit+ThemeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+ThemeExtensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,20 +67,29 @@
 		801BED1222177F7600E3F610 /* Darkscreen */ = {
 			isa = PBXGroup;
 			children = (
-				801BED1322177F7600E3F610 /* AppDelegate.swift */,
-				801BED1522177F7600E3F610 /* ViewController.swift */,
-				80632AB3222612D5002BC39A /* Settings.bundle */,
-				801BED1722177F7600E3F610 /* Main.storyboard */,
-				801BED1A22177F7700E3F610 /* Assets.xcassets */,
-				801BED1C22177F7700E3F610 /* LaunchScreen.storyboard */,
-				801BED1F22177F7700E3F610 /* Info.plist */,
-				80632AB7222618F7002BC39A /* Settings.swift */,
-				80632AB922262658002BC39A /* SettingsViewController.swift */,
+				802860E7228BEA95000433D2 /* BaseTableViewController.swift */,
 				80632ABB222629CC002BC39A /* BaseViewController.swift */,
+				801BED1522177F7600E3F610 /* DSViewController.swift */,
+				801BED1F22177F7700E3F610 /* Info.plist */,
+				801BED1722177F7600E3F610 /* Main.storyboard */,
+				802860E5228BD811000433D2 /* Settings.bundle */,
+				802860E4228BD811000433D2 /* Settings.swift */,
+				80429EE2228BCE6C00ACB10C /* Supporting Files */,
 				80632ABD2226324F002BC39A /* Theme.swift */,
-				807B9E37222A00AB00121C30 /* UIKitThemeExtensions.swift */,
+				802860E0228BD200000433D2 /* ThemesTableViewController.swift */,
+				807B9E37222A00AB00121C30 /* UIKit+ThemeExtensions.swift */,
 			);
 			path = Darkscreen;
+			sourceTree = "<group>";
+		};
+		80429EE2228BCE6C00ACB10C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				801BED1322177F7600E3F610 /* AppDelegate.swift */,
+				801BED1A22177F7700E3F610 /* Assets.xcassets */,
+				801BED1C22177F7700E3F610 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,6 +124,7 @@
 				TargetAttributes = {
 					801BED0F22177F7600E3F610 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -140,7 +151,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80632AB4222612D5002BC39A /* Settings.bundle in Resources */,
 				801BED1E22177F7700E3F610 /* LaunchScreen.storyboard in Resources */,
 				801BED1B22177F7700E3F610 /* Assets.xcassets in Resources */,
 				801BED1922177F7600E3F610 /* Main.storyboard in Resources */,
@@ -154,13 +164,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80632AB8222618F7002BC39A /* Settings.swift in Sources */,
-				807B9E38222A00AB00121C30 /* UIKitThemeExtensions.swift in Sources */,
-				801BED1622177F7600E3F610 /* ViewController.swift in Sources */,
-				80632ABA22262658002BC39A /* SettingsViewController.swift in Sources */,
+				807B9E38222A00AB00121C30 /* UIKit+ThemeExtensions.swift in Sources */,
+				801BED1622177F7600E3F610 /* DSViewController.swift in Sources */,
+				802860E8228BEA95000433D2 /* BaseTableViewController.swift in Sources */,
 				80632ABE2226324F002BC39A /* Theme.swift in Sources */,
 				801BED1422177F7600E3F610 /* AppDelegate.swift in Sources */,
+				802860E6228BD811000433D2 /* Settings.swift in Sources */,
 				80632ABC222629CC002BC39A /* BaseViewController.swift in Sources */,
+				802860E1228BD200000433D2 /* ThemesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +326,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickymarino.Darkscreen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -333,7 +344,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickymarino.Darkscreen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
