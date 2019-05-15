@@ -54,16 +54,21 @@ class Settings {
               background: .white,
               primary: .black,
               secondary: .appleBlue),
-        Theme("IU Sucks",
+        Theme("80s",
               statusBar: .default,
-              background: .white,
-              primary: .black,
-              secondary: .appleRed),
+              background: UIColor(red: 196, green: 72, blue: 142),
+              primary: UIColor(red: 43, green: 209, blue: 252),
+              secondary: UIColor(red: 243, green: 234, blue: 95)),
         Theme("90s",
               statusBar: .default,
-              background: UIColor(red: 2/255, green: 53/255, blue: 97/255, alpha: 1),
-              primary: UIColor(red: 214/255, green: 176/255, blue: 39/255, alpha: 1),
-              secondary: UIColor(red: 247/255, green: 83/255, blue: 134/255, alpha: 1))
+              background: UIColor(red: 2, green: 53, blue: 97),
+              primary: UIColor(red: 214, green: 176, blue: 39),
+              secondary: UIColor(red: 247, green: 83, blue: 134)),
+        Theme("Outrun",
+              statusBar: .default,
+              background: UIColor(red: 38, green: 20, blue: 71),
+              primary: UIColor(red: 247, green: 6, blue: 207),
+              secondary: UIColor(red: 45, green: 226, blue: 230))
     ]
 
     // MARK: - Private implementation
