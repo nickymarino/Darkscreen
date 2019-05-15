@@ -16,15 +16,19 @@ class Settings {
     class var theme: Theme {
         get {
             if darkModeEnabled {
-                return Theme.getTheme("Dark")
+                return Theme.getThemeBy(name: "Dark")
             }
-            return Theme.getTheme("Light")
+            return Theme.getThemeBy(name: "Light")
         }
     }
 
     class var darkModeEnabled: Bool {
         get { return SettingsBundleHelper.darkModeEnabled }
         set(isEnabled) { SettingsBundleHelper.darkModeEnabled = isEnabled }
+    }
+
+    class func availableThemes() -> [String] {
+        return Theme.themeNames()
     }
 
     class func setVersionAndBuildNumber() {

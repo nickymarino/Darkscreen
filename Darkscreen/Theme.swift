@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class Theme {
+    var name: String
     var statusBarStyle: UIStatusBarStyle
     var backgroundColor: UIColor
     var primaryColor: UIColor
@@ -24,28 +25,43 @@ class Theme {
         }
     }
 
-    private static let themes: [String:Theme] = [
-        "Dark": Theme(statusBar: .lightContent,
+    static let themes: [Theme] = [
+        Theme("Dark", statusBar: .lightContent,
                       background: .black,
                       primary: .white,
                       secondary: .appleYellow),
-        "Light": Theme(statusBar: .default,
+        Theme("Light", statusBar: .default,
                        background: .white,
                        primary: .black,
                        secondary: .appleBlue)
     ]
 
-    init(statusBar: UIStatusBarStyle, background: UIColor, primary: UIColor, secondary: UIColor) {
+    init(_ name: String, statusBar: UIStatusBarStyle, background: UIColor, primary: UIColor, secondary: UIColor) {
+        self.name = name
         statusBarStyle = statusBar
         backgroundColor = background
         primaryColor = primary
         secondaryColor = secondary
     }
 
-    static func getTheme(_ name: String) -> Theme {
-        if let theme = themes[name] {
-            return theme
+    static func getThemeBy(name: String) -> Theme {
+        for theme in themes {
+            if theme.name == name {
+                return theme
+            }
         }
-        return themes.first!.value
+        return themes.first!
+    }
+
+    static func getThemeBy(rowNumber: Int) -> Theme {
+        if rowNumber > themes.count {
+            print("Error: row number \(rowNumber) > theme count \(themes.count)")
+            return themes[0]
+        }
+        return themes[rowNumber]
+    }
+
+    static func themeNames() -> [String] {
+        return themes.map({$0.name}).sorted()
     }
 }

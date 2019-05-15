@@ -11,6 +11,7 @@ import UIKit
 class SettingsViewController: BaseViewController {
     @IBOutlet weak var darkModeEnabledSwitch: UISwitch!
     @IBOutlet weak var darkModeEnabledLabel: UILabel!
+    @IBOutlet weak var themeTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

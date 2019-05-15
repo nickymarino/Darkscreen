@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k6Y-CW-zjx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k6Y-CW-zjx">
     <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +21,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Darkscreen" id="O44-hm-QIa">
-                        <barButtonItem key="rightBarButtonItem" image="gear" id="CUX-G4-GY1">
+                        <barButtonItem key="rightBarButtonItem" title="Themes" id="CUX-G4-GY1">
                             <inset key="imageInsets" minX="0.0" minY="0.0" maxX="-40" maxY="0.0"/>
                             <connections>
                                 <segue destination="9zJ-Dd-V46" kind="show" id="hhc-NZ-whF"/>
@@ -44,28 +44,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="4nd-FI-uuK">
-                                <rect key="frame" x="410" y="175" width="205" height="31"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ArP-1a-hDE">
+                                <rect key="frame" x="410" y="410" width="204" height="31"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4y-a6-LKM">
-                                        <rect key="frame" x="0.0" y="0.0" width="84" height="31"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dt9-YV-M1d">
-                                        <rect key="frame" x="156" y="0.0" width="51" height="31"/>
-                                        <connections>
-                                            <action selector="darkModeEnabledSwitchUpdated:" destination="9zJ-Dd-V46" eventType="valueChanged" id="tNb-1K-j8L"/>
-                                        </connections>
-                                    </switch>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="4nd-FI-uuK">
+                                        <rect key="frame" x="0.0" y="0.0" width="204" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4y-a6-LKM">
+                                                <rect key="frame" x="0.0" y="0.0" width="84" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dt9-YV-M1d">
+                                                <rect key="frame" x="156" y="0.0" width="50" height="31"/>
+                                                <connections>
+                                                    <action selector="darkModeEnabledSwitchUpdated:" destination="9zJ-Dd-V46" eventType="valueChanged" id="tNb-1K-j8L"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="4nd-FI-uuK" firstAttribute="centerY" secondItem="Wnh-iS-sgU" secondAttribute="centerY" id="FZq-bi-NNw"/>
-                            <constraint firstItem="4nd-FI-uuK" firstAttribute="centerX" secondItem="Wnh-iS-sgU" secondAttribute="centerX" id="gQA-C7-H8x"/>
+                            <constraint firstItem="ArP-1a-hDE" firstAttribute="leading" secondItem="Wnh-iS-sgU" secondAttribute="leading" constant="410" id="5qy-7t-d6r"/>
+                            <constraint firstItem="ArP-1a-hDE" firstAttribute="top" secondItem="Wnh-iS-sgU" secondAttribute="top" constant="288" id="eJu-ml-GqV"/>
+                            <constraint firstItem="ArP-1a-hDE" firstAttribute="centerX" secondItem="Wnh-iS-sgU" secondAttribute="centerX" id="rtc-f4-y7s"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wnh-iS-sgU"/>
                     </view>
@@ -96,7 +102,4 @@
             <point key="canvasLocation" x="-306" y="673"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="gear" width="112" height="128"/>
-    </resources>
 </document>
