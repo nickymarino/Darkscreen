@@ -18,7 +18,7 @@ class DSViewController: BaseViewController {
     }
 
     func registerSettingsBundle() {
-        Settings.setVersionAndBuildNumber()
+        Settings.shared.setVersionAndBuildNumber()
         UserDefaults.standard.register(defaults: [String:AnyObject]())
     }
 }

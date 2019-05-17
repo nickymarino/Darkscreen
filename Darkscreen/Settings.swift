@@ -13,8 +13,12 @@ import UIKit
 
 class Settings {
 
+    // MARK: - Instance properties/methods
+
+    /// Instance of Settings used to get an indivdual settings property
     static let shared = Settings()
 
+    /// Current theme
     var theme: Theme {
         get {
             return Settings.themes.getFirstBy(name: themeName) ?? Settings.themes.getFirstBy(name: "Dark")!
@@ -23,25 +27,27 @@ class Settings {
         }
     }
 
+    /// Current version number
     var versionNumber: String? {
-        get { return UserDefaults.standard.string(forKey: BundleKeys.Version) }
-        set { UserDefaults.standard.set(newValue, forKey: BundleKeys.Version) }
+        get { return defaults.string(forKey: BundleKeys.Version) }
     }
 
+    /// Current build number
     var buildNumber: String? {
-        get { return UserDefaults.standard.string(forKey: BundleKeys.Build) }
-        set { UserDefaults.standard.set(newValue, forKey: BundleKeys.Build) }
+        get { return defaults.string(forKey: BundleKeys.Build) }
+    }
+
+    func setVersionAndBuildNumber() {
+        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+        defaults.set(version, forKey: BundleKeys.Version)
+
+        let build = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
+        defaults.set(build, forKey: BundleKeys.Build)
+
+        defaults.synchronize()
     }
 
     // MARK: - Class properties/methods
-
-    class func setVersionAndBuildNumber() {
-        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
-        UserDefaults.standard.set(version, forKey: BundleKeys.Version)
-        
-        let build = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
-        UserDefaults.standard.set(build, forKey: BundleKeys.Build)
-    }
 
     static let themes: [Theme] = [
         Theme("Dark",
@@ -75,10 +81,12 @@ class Settings {
 
     private init() {}
 
+    private var defaults = UserDefaults.standard
+
     /// The theme name is used as the unique key in settings
     private var themeName: String {
-        get { return UserDefaults.standard.string(forKey: BundleKeys.Theme) ?? "Dark" }
-        set { UserDefaults.standard.set(newValue, forKey: BundleKeys.Theme) }
+        get { return defaults.string(forKey: BundleKeys.Theme) ?? "Dark" }
+        set { defaults.set(newValue, forKey: BundleKeys.Theme) }
     }
 
     /// String versions of the items in Settings.bundle
