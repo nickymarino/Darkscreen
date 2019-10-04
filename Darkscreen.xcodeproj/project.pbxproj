@@ -35,6 +35,8 @@
 		80632ABB222629CC002BC39A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		80632ABD2226324F002BC39A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		807B9E37222A00AB00121C30 /* UIKit+ThemeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+ThemeExtensions.swift"; sourceTree = "<group>"; };
+		80CC3A1F2346DF6800B8B641 /* Darkscreen.xcf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Darkscreen.xcf; sourceTree = "<group>"; };
+		80CC3A202346E4B400B8B641 /* Darkscreen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Darkscreen.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		801BED1222177F7600E3F610 /* Darkscreen */ = {
 			isa = PBXGroup;
 			children = (
+				80CC3A202346E4B400B8B641 /* Darkscreen.entitlements */,
 				802860E7228BEA95000433D2 /* BaseTableViewController.swift */,
 				80632ABB222629CC002BC39A /* BaseViewController.swift */,
 				801BED1522177F7600E3F610 /* DSViewController.swift */,
@@ -87,6 +90,7 @@
 			children = (
 				801BED1322177F7600E3F610 /* AppDelegate.swift */,
 				801BED1A22177F7700E3F610 /* Assets.xcassets */,
+				80CC3A1F2346DF6800B8B641 /* Darkscreen.xcf */,
 				801BED1C22177F7700E3F610 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
@@ -317,6 +321,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Darkscreen/Darkscreen.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8K67C8P8NU;
 				INFOPLIST_FILE = Darkscreen/Info.plist;
@@ -335,6 +340,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Darkscreen/Darkscreen.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8K67C8P8NU;
 				INFOPLIST_FILE = Darkscreen/Info.plist;

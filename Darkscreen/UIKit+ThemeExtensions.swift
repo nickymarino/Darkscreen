@@ -13,8 +13,11 @@ public extension UINavigationBar {
         // Background color
         barTintColor = Settings.shared.theme.backgroundColor
 
-        // Text & icon color
+        // Bar item color
         tintColor = Settings.shared.theme.secondaryColor
+
+        // Title text color
+        titleTextAttributes = [NSAttributedString.Key.foregroundColor: Settings.shared.theme.secondaryColor]
 
         // Status bar style
         barStyle = Settings.shared.theme.navbarStyle

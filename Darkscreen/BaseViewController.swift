@@ -44,6 +44,6 @@ class BaseViewController: UIViewController {
         self.view.backgroundColor = Settings.shared.theme.backgroundColor
 
         // Navigation bar
-        navigationController?.navigationBar.updateTheme()
+        self.navigationController?.navigationBar.updateTheme()
     }
 }
